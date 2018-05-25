@@ -28,6 +28,16 @@
 - (instancetype)initWithRouteRegistrar:(WAAppRouteRegistrar *)registrar NS_DESIGNATED_INITIALIZER;
 
 /**
+ *  Allow override of placeTargetViewControllerClass:inNavigationController:animated
+ *
+ *  @return a view controller possibly instantiated via Storyboard
+ */
+
+- (UIViewController *)placeTargetViewControllerClass:(Class)targetViewControllerClass
+                              inNavigationController:(UINavigationController *)navigationController
+                                            animated:(BOOL)animated;
+
+/**
  * @see `initWithRouteRegistrar:`
  */
 + (instancetype)routeHandlerWithRouteRegistrar:(WAAppRouteRegistrar *)registrar;
